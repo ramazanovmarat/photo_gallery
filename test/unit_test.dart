@@ -65,7 +65,7 @@ void main() {
   });
 
   testWidgets('Вызывает FetchPhotos при нажатии на кнопку fetch', (WidgetTester tester) async {
-    whenListen(mockPhotoBloc, Stream.value(PhotoLoaded([]))); // Мокируем стрим
+    whenListen(mockPhotoBloc, Stream.value(PhotoLoaded([])));
     when(() => mockPhotoBloc.state).thenReturn(PhotoLoaded([]));
 
     await tester.pumpWidget(createTestWidget());
